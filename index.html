@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>MyTaskDock — Your work, organized</title>
+  <meta
+    name="description"
+    content="MyTaskDock is a local-first productivity workspace for managing tasks, files, notes, messages, and deadlines in one place."
+  >
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: #0b0d12;
+      color: #f5f7fb;
+    }
+
+    .container {
+      width: min(1100px, calc(100% - 48px));
+      margin: 0 auto;
+    }
+
+    header {
+      padding: 28px 0;
+      font-size: 20px;
+      font-weight: 700;
+      letter-spacing: -0.03em;
+    }
+
+    .hero {
+      padding: 120px 0 100px;
+      max-width: 850px;
+    }
+
+    .badge {
+      display: inline-block;
+      padding: 7px 12px;
+      border: 1px solid #303542;
+      border-radius: 999px;
+      color: #adb6c8;
+      font-size: 14px;
+      margin-bottom: 28px;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(52px, 8vw, 88px);
+      line-height: 0.98;
+      letter-spacing: -0.065em;
+    }
+
+    .hero p {
+      margin-top: 32px;
+      max-width: 680px;
+      color: #aeb6c6;
+      font-size: 21px;
+      line-height: 1.6;
+    }
+
+    .features {
+      border-top: 1px solid #242833;
+      padding: 80px 0;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    .feature {
+      padding: 28px;
+      background: #12151c;
+      border: 1px solid #242833;
+      border-radius: 18px;
+    }
+
+    .feature h2 {
+      margin-top: 0;
+      font-size: 19px;
+    }
+
+    .feature p {
+      color: #929bad;
+      line-height: 1.6;
+      margin-bottom: 0;
+    }
+
+    .ai {
+      padding: 80px 0;
+      border-top: 1px solid #242833;
+    }
+
+    .ai h2 {
+      font-size: 38px;
+      letter-spacing: -0.04em;
+      margin-bottom: 20px;
+    }
+
+    .ai p {
+      max-width: 720px;
+      color: #aeb6c6;
+      font-size: 18px;
+      line-height: 1.7;
+    }
+
+    footer {
+      margin-top: 40px;
+      padding: 40px 0;
+      border-top: 1px solid #242833;
+      color: #737d90;
+      font-size: 14px;
+    }
+
+    footer a {
+      color: #aeb6c6;
+      text-decoration: none;
+    }
+
+    @media (max-width: 760px) {
+      .hero {
+        padding: 80px 0 70px;
+      }
+
+      .features {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+
+    <header>
+      MyTaskDock
+    </header>
+
+    <main>
+
+      <section class="hero">
+        <div class="badge">Currently in development</div>
+
+        <h1>
+          Your work.<br>
+          One place.
+        </h1>
+
+        <p>
+          MyTaskDock is a local-first productivity workspace that brings
+          tasks, deadlines, files, notes, and communication history together.
+          Each task becomes a persistent workspace, so important context
+          doesn't disappear when the work is done.
+        </p>
+      </section>
+
+      <section class="features">
+
+        <div class="feature">
+          <h2>Task-centered workspace</h2>
+          <p>
+            Organize deadlines, notes, instructions, and related information
+            around the work itself instead of scattering them across apps.
+          </p>
+        </div>
+
+        <div class="feature">
+          <h2>Files stay with the work</h2>
+          <p>
+            Drag and drop related files into each task and keep the complete
+            working context together from start to finish.
+          </p>
+        </div>
+
+        <div class="feature">
+          <h2>History that doesn't disappear</h2>
+          <p>
+            Preserve messages, decisions, and task history instead of losing
+            them when a sticky note or temporary to-do item is deleted.
+          </p>
+        </div>
+
+      </section>
+
+      <section class="ai">
+        <h2>AI that understands the task context.</h2>
+
+        <p>
+          We're exploring Claude-powered features for summarizing task history,
+          extracting action items from messages, organizing information, and
+          helping users quickly resume complex work without rebuilding context.
+        </p>
+      </section>
+
+    </main>
+
+    <footer>
+      © 2026 MyTaskDock ·
+      <a href="mailto:founder@mytaskdock.xyz">founder@mytaskdock.xyz</a>
+    </footer>
+
+  </div>
+
+</body>
+</html>
