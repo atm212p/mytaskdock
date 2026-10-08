@@ -1,210 +1,106 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <title>MyTaskDock — Your work, organized</title>
-  <meta
-    name="description"
-    content="MyTaskDock is a local-first productivity workspace for managing tasks, files, notes, messages, and deadlines in one place."
-  >
-
-  <style>
-    * {
-      box-sizing: border-box;
-    }
-
-    body {
-      margin: 0;
-      font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      background: #0b0d12;
-      color: #f5f7fb;
-    }
-
-    .container {
-      width: min(1100px, calc(100% - 48px));
-      margin: 0 auto;
-    }
-
-    header {
-      padding: 28px 0;
-      font-size: 20px;
-      font-weight: 700;
-      letter-spacing: -0.03em;
-    }
-
-    .hero {
-      padding: 120px 0 100px;
-      max-width: 850px;
-    }
-
-    .badge {
-      display: inline-block;
-      padding: 7px 12px;
-      border: 1px solid #303542;
-      border-radius: 999px;
-      color: #adb6c8;
-      font-size: 14px;
-      margin-bottom: 28px;
-    }
-
-    h1 {
-      margin: 0;
-      font-size: clamp(52px, 8vw, 88px);
-      line-height: 0.98;
-      letter-spacing: -0.065em;
-    }
-
-    .hero p {
-      margin-top: 32px;
-      max-width: 680px;
-      color: #aeb6c6;
-      font-size: 21px;
-      line-height: 1.6;
-    }
-
-    .features {
-      border-top: 1px solid #242833;
-      padding: 80px 0;
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 24px;
-    }
-
-    .feature {
-      padding: 28px;
-      background: #12151c;
-      border: 1px solid #242833;
-      border-radius: 18px;
-    }
-
-    .feature h2 {
-      margin-top: 0;
-      font-size: 19px;
-    }
-
-    .feature p {
-      color: #929bad;
-      line-height: 1.6;
-      margin-bottom: 0;
-    }
-
-    .ai {
-      padding: 80px 0;
-      border-top: 1px solid #242833;
-    }
-
-    .ai h2 {
-      font-size: 38px;
-      letter-spacing: -0.04em;
-      margin-bottom: 20px;
-    }
-
-    .ai p {
-      max-width: 720px;
-      color: #aeb6c6;
-      font-size: 18px;
-      line-height: 1.7;
-    }
-
-    footer {
-      margin-top: 40px;
-      padding: 40px 0;
-      border-top: 1px solid #242833;
-      color: #737d90;
-      font-size: 14px;
-    }
-
-    footer a {
-      color: #aeb6c6;
-      text-decoration: none;
-    }
-
-    @media (max-width: 760px) {
-      .hero {
-        padding: 80px 0 70px;
-      }
-
-      .features {
-        grid-template-columns: 1fr;
-      }
-    }
-  </style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <meta name="theme-color" content="#f8f8f4">
+  <title>MyTaskDock — Finish the task. Keep the context.</title>
+  <meta name="description" content="A Windows desktop app that keeps task dates, instructions, working notes and local files together. Revisit completed work with its context intact.">
+  <link rel="canonical" href="https://mytaskdock.xyz/">
+  <link rel="alternate" hreflang="en" href="https://mytaskdock.xyz/">
+  <link rel="alternate" hreflang="ko" href="https://mytaskdock.xyz/ko/">
+  <link rel="alternate" hreflang="x-default" href="https://mytaskdock.xyz/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="MyTaskDock">
+  <meta property="og:title" content="MyTaskDock — Finish the task. Keep the context.">
+  <meta property="og:description" content="A Windows desktop app that keeps task dates, instructions, working notes and local files together. Revisit completed work with its context intact.">
+  <meta property="og:url" content="https://mytaskdock.xyz/">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:image" content="https://mytaskdock.xyz/assets/images/social-preview.png">
+  <meta property="og:image:alt" content="MyTaskDock task workspace with fictional example data">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/site.css">
+  <script src="assets/site.js" defer></script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebSite", "name": "MyTaskDock", "url": "https://mytaskdock.xyz/", "inLanguage": "en", "description": "A Windows desktop app that keeps task dates, instructions, working notes and local files together. Revisit completed work with its context intact."}</script>
 </head>
-
-<body>
-
-  <div class="container">
-
-    <header>
-      MyTaskDock
-    </header>
-
-    <main>
-
-      <section class="hero">
-        <div class="badge">Currently in development</div>
-
-        <h1>
-          Your work.<br>
-          One place.
-        </h1>
-
-        <p>
-          MyTaskDock is a local-first productivity workspace that brings
-          tasks, deadlines, files, notes, and communication history together.
-          Each task becomes a persistent workspace, so important context
-          doesn't disappear when the work is done.
-        </p>
-      </section>
-
-      <section class="features">
-
-        <div class="feature">
-          <h2>Task-centered workspace</h2>
-          <p>
-            Organize deadlines, notes, instructions, and related information
-            around the work itself instead of scattering them across apps.
-          </p>
-        </div>
-
-        <div class="feature">
-          <h2>Files stay with the work</h2>
-          <p>
-            Drag and drop related files into each task and keep the complete
-            working context together from start to finish.
-          </p>
-        </div>
-
-        <div class="feature">
-          <h2>History that doesn't disappear</h2>
-          <p>
-            Preserve messages, decisions, and task history instead of losing
-            them when a sticky note or temporary to-do item is deleted.
-          </p>
-        </div>
-
-      </section>
-
-      <section class="ai">
-        <h2>AI that understands the task context.</h2>
-
-        <p>
-          We're exploring Claude-powered features for summarizing task history,
-          extracting action items from messages, organizing information, and
-          helping users quickly resume complex work without rebuilding context.
-        </p>
-      </section>
-
-    </main>
-
-    <footer>
-      © 2026 MyTaskDock ·
-      <a href="mailto:founder@mytaskdock.xyz">founder@mytaskdock.xyz</a>
-    </footer>
-
+<body data-copy-success="Email address copied">
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="container nav-row"><a class="brand" href="index.html" aria-label="MyTaskDock"><svg class="brand-icon" viewBox="0 0 36 36" aria-hidden="true"><path d="M4 9a3 3 0 0 1 3-3h7l4 4h11a3 3 0 0 1 3 3v15a3 3 0 0 1-3 3H7a3 3 0 0 1-3-3Z" fill="#efdfaf" stroke="#967331" stroke-width="1.4"/><path d="M10 17h16M10 22h11" stroke="#967331" stroke-width="1.7" stroke-linecap="round"/></svg><span>MyTaskDock</span></a>
+    <nav class="nav-links" aria-label="Main"><a href="#product">Product</a><a href="#workflow">How it works</a><a href="#future">What’s next</a><a href="#about">About</a></nav>
+    <div class="nav-actions"><div class="language-switch" aria-label="Language"><a href="index.html" lang="en" hreflang="en" aria-current="page">EN</a><span class="language-divider" aria-hidden="true"></span><a href="ko/index.html" lang="ko" hreflang="ko" >&#54620;&#44397;&#50612;</a></div><a class="btn btn-dark nav-contact" href="#contact">Get in touch<svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a><button class="menu-button" aria-label="Open navigation" aria-expanded="false" aria-controls="mobile-nav"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/></svg></button></div>
   </div>
-
+  <nav class="container mobile-nav" id="mobile-nav" aria-label="Mobile"><a href="#product">Product</a><a href="#workflow">How it works</a><a href="#future">What’s next</a><a href="#about">About</a><a href="#contact">Get in touch</a></nav>
+</header>
+<main id="main">
+  <section class="hero">
+    <div class="container">
+      <div class="hero-grid">
+        <div class="hero-copy">
+          <div class="status-label"><span class="dot" aria-hidden="true"></span>EARLY WINDOWS BUILD<span class="version">v0.4.8</span></div>
+          <h1>Finish the task.<br><span class="accent">Keep the context.</span></h1><p class="hero-description">A task is more than a deadline. Keep the instructions, working notes, local files, and result together — then find them again after the work is done.</p>
+          <div class="hero-buttons"><a class="btn btn-primary" href="#product">Explore the product<svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a><a class="btn btn-outline" href="#workflow">How it works</a></div>
+          <div class="platform-note"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 4h18v16H3V4ZM3 8h18M8 8v12"/></svg><span>Windows desktop</span><span aria-hidden="true">&middot;</span><span>Local storage</span><span aria-hidden="true">&middot;</span><span>Korean interface</span></div>
+        </div>
+        <figure class="hero-visual">
+          <div class="screen-frame"><div class="screen-topbar"><span class="screen-name"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 3v4m8-4v4M4 9h16M5 5h14a1 1 0 0 1 1 1v14H4V6a1 1 0 0 1 1-1Z"/></svg>Calendar &amp; work shelf</span><span class="screen-label">SOURCE UI · EXAMPLE DATA</span></div><a class="screen-open" href="assets/images/calendar.webp" data-lightbox data-title="Calendar &amp; work shelf" data-image-alt="MyTaskDock month calendar and work shelf showing fictional overdue, current and upcoming work, with a timed schedule." aria-label="Enlarge image: Calendar &amp; work shelf"><img src="assets/images/calendar.webp" alt="MyTaskDock month calendar and work shelf showing fictional overdue, current and upcoming work, with a timed schedule." width="2048" height="1326" loading="eager" decoding="async" fetchpriority="high"><span class="open-hint"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 3H3v5M16 3h5v5M21 16v5h-5M3 16v5h5"/></svg></span></a></div>
+          <figcaption><span class="tiny-square" aria-hidden="true"></span>Current WPF interface, rendered with fictional example data.</figcaption>
+        </figure>
+      </div>
+      <div class="context-ribbon"><span class="ribbon-title">One task. The whole picture.</span><div class="context-items"><span><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 3v4m8-4v4M4 9h16M5 5h14a1 1 0 0 1 1 1v14H4V6a1 1 0 0 1 1-1Z"/></svg>Dates</span><span><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h14v12l-5 5H5V4Zm9 17v-5h5M8 9h8M8 12h6"/></svg>Instructions</span><span><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h14v12l-5 5H5V4Zm9 17v-5h5M8 9h8M8 12h6"/></svg>Notes</span><span><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6h7l2 2h9v12H3V6Z"/></svg>Files</span><span><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12 4 4L19 6"/></svg>Result</span></div></div>
+    </div>
+  </section>
+  <section class="problem"><div class="container problem-grid"><div><div class="eyebrow"><span class="line"></span>WHY MYTASKDOCK</div><h2>The work is done.<br>Where did its story go?</h2></div><p>The request arrived in a message. The files ended up in a folder. The outcome lived on a sticky note.<br><br>MyTaskDock brings those pieces back to the task. <strong>Not just what to do — but what was requested, what changed, and how it ended.</strong></p></div></section>
+  <section class="product-section" id="product">
+    <div class="container"><div class="section-head"><div><div class="eyebrow"><span class="line"></span>INSIDE THE PRODUCT</div><h2>A place for the work.<br>And everything behind it.</h2></div><p>Six views from version 0.4.8. Explore the current interface with fictional example data.</p></div>
+    <nav class="product-tabs" aria-label="Product"><a class="product-tab" href="#view-workspace" id="tab-workspace" aria-selected="true"><span class="tab-number">01</span>Workspace</a><a class="product-tab" href="#view-calendar" id="tab-calendar" aria-selected="false"><span class="tab-number">02</span>Calendar</a><a class="product-tab" href="#view-history" id="tab-history" aria-selected="false"><span class="tab-number">03</span>Instructions</a><a class="product-tab" href="#view-files" id="tab-files" aria-selected="false"><span class="tab-number">04</span>Files</a><a class="product-tab" href="#view-archive" id="tab-archive" aria-selected="false"><span class="tab-number">05</span>Archive</a><a class="product-tab" href="#view-capture" id="tab-capture" aria-selected="false"><span class="tab-number">06</span>Quick Capture</a></nav>
+    <section class="product-panel" id="view-workspace" aria-labelledby="tab-workspace" tabindex="0">
+          <figure class="panel-image-wrap"><a class="screen-open" href="assets/images/workspace.webp" data-lightbox data-title="Keep instructions, working notes, and files with the task." data-image-alt="MyTaskDock task detail with received instructions on the left and a memo and three example files on the right. The interface is Korean." aria-label="Enlarge image: Keep instructions, working notes, and files with the task."><img src="assets/images/workspace.webp" alt="MyTaskDock task detail with received instructions on the left and a memo and three example files on the right. The interface is Korean." width="2048" height="1525" loading="lazy" decoding="async" ><span class="open-hint"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 3H3v5M16 3h5v5M21 16v5h-5M3 16v5h5"/></svg></span></a></figure>
+          <div class="panel-copy"><span class="panel-number">01 / WORKSPACE</span><h3>One task.<br>Its working context.</h3><p>Open a task to see received instructions, activity, a working memo, and related files in one place. Keep it in the main window or open a separate task window.</p><ul><li><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12 4 4L19 6"/></svg><span>Instructions and activity together</span></li><li><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12 4 4L19 6"/></svg><span>An automatically saved working memo</span></li><li><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12 4 4L19 6"/></svg><span>A separate, optionally always-on-top window</span></li></ul><a class="text-link" href="assets/images/workspace.webp" data-lightbox data-title="Keep instructions, working notes, and files with the task." data-image-alt="MyTaskDock task detail with received instructions on the left and a memo and three example files on the right. The interface is Korean.">Enlarge image<svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 3H3v5M16 3h5v5M21 16v5h-5M3 16v5h5"/></svg></a></div>
+        </section><section class="product-panel" id="view-calendar" aria-labelledby="tab-calendar" tabindex="0">
+          <figure class="panel-image-wrap"><a class="screen-open" href="assets/images/calendar.webp" data-lightbox data-title="See dated work and upcoming schedules together." data-image-alt="MyTaskDock month calendar and work shelf showing fictional overdue, current and upcoming work, with a timed schedule." aria-label="Enlarge image: See dated work and upcoming schedules together."><img src="assets/images/calendar.webp" alt="MyTaskDock month calendar and work shelf showing fictional overdue, current and upcoming work, with a timed schedule." width="2048" height="1326" loading="lazy" decoding="async" ><span class="open-hint"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 3H3v5M16 3h5v5M21 16v5h-5M3 16v5h5"/></svg></span></a></figure>
+          <div class="panel-copy"><span class="panel-number">02 / CALENDAR</span><h3>See what needs<br>your attention.</h3><p>Place tasks on the calendar and use the work shelf to review overdue, today’s, and upcoming work. Appointments can carry their own time.</p><ul><li><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12 4 4L19 6"/></svg><span>Month and two-week views</span></li><li><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12 4 4L19 6"/></svg><span>Overdue and upcoming task groups</span></li><li><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12 4 4L19 6"/></svg><span>Move and resize task periods on the calendar</span></li></ul><a class="text-link" href="assets/images/calendar.webp" data-lightbox data-title="See dated work and upcoming schedules together." data-image-alt="MyTaskDock month calendar and work shelf showing fictional overdue, current and upcoming work, with a timed schedule.">Enlarge image<svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 3H3v5M16 3h5v5M21 16v5h-5M3 16v5h5"/></svg></a></div>
+        </section><section class="product-panel" id="view-history" aria-labelledby="tab-history" tabindex="0">
+          <figure class="panel-image-wrap"><a class="screen-open" href="assets/images/history.webp" data-lightbox data-title="Revisit the instructions and changes behind the work." data-image-alt="MyTaskDock instruction history with fictional sender labels, dated message text and activity entries." aria-label="Enlarge image: Revisit the instructions and changes behind the work."><img src="assets/images/history.webp" alt="MyTaskDock instruction history with fictional sender labels, dated message text and activity entries." width="1547" height="2048" loading="lazy" decoding="async" ><span class="open-hint"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 3H3v5M16 3h5v5M21 16v5h-5M3 16v5h5"/></svg></span></a></figure>
+          <div class="panel-copy"><span class="panel-number">03 / INSTRUCTIONS</span><h3>Keep the request.<br>Follow the changes.</h3><p>Add received instructions with sender and time details. Revisit them alongside recorded actions such as date changes, file additions, and completion.</p><ul><li><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12 4 4L19 6"/></svg><span>Paste text or import supported saved messages</span></li><li><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12 4 4L19 6"/></svg><span>Keep instructions separate from your working memo</span></li><li><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12 4 4L19 6"/></svg><span>Record supported task activities</span></li></ul><a class="text-link" href="assets/images/history.webp" data-lightbox data-title="Revisit the instructions and changes behind the work." data-image-alt="MyTaskDock instruction history with fictional sender labels, dated message text and activity entries.">Enlarge image<svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 3H3v5M16 3h5v5M21 16v5h-5M3 16v5h5"/></svg></a></div>
+        </section><section class="product-panel" id="view-files" aria-labelledby="tab-files" tabindex="0">
+          <figure class="panel-image-wrap"><a class="screen-open" href="assets/images/files.webp" data-lightbox data-title="Collect each task’s working files in a local folder." data-image-alt="Task workspace showing example text and CSV files, a working memo and the local file-drop area. The actual folder path is hidden." aria-label="Enlarge image: Collect each task’s working files in a local folder."><img src="assets/images/files.webp" alt="Task workspace showing example text and CSV files, a working memo and the local file-drop area. The actual folder path is hidden." width="1294" height="1689" loading="lazy" decoding="async" ><span class="open-hint"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 3H3v5M16 3h5v5M21 16v5h-5M3 16v5h5"/></svg></span></a></figure>
+          <div class="panel-copy"><span class="panel-number">04 / FILES</span><h3>Ordinary files.<br>A place in the task.</h3><p>Collect working files in an ordinary local task folder. A simple task can stay folderless and gain a folder when files are added.</p><ul><li><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12 4 4L19 6"/></svg><span>Drag to copy; supported Shift-drop to move</span></li><li><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12 4 4L19 6"/></svg><span>Open files with their associated applications</span></li><li><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12 4 4L19 6"/></svg><span>No document-content analysis or file versioning</span></li></ul><a class="text-link" href="assets/images/files.webp" data-lightbox data-title="Collect each task’s working files in a local folder." data-image-alt="Task workspace showing example text and CSV files, a working memo and the local file-drop area. The actual folder path is hidden.">Enlarge image<svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 3H3v5M16 3h5v5M21 16v5h-5M3 16v5h5"/></svg></a></div>
+        </section><section class="product-panel" id="view-archive" aria-labelledby="tab-archive" tabindex="0">
+          <figure class="panel-image-wrap"><a class="screen-open" href="assets/images/archive.webp" data-lightbox data-title="Find completed work with its result and context attached." data-image-alt="Completed-task archive with the word summary highlighted in keyword matches and the selected task’s result and history visible." aria-label="Enlarge image: Find completed work with its result and context attached."><img src="assets/images/archive.webp" alt="Completed-task archive with the word summary highlighted in keyword matches and the selected task’s result and history visible." width="2048" height="1326" loading="lazy" decoding="async" ><span class="open-hint"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 3H3v5M16 3h5v5M21 16v5h-5M3 16v5h5"/></svg></span></a></figure>
+          <div class="panel-copy"><span class="panel-number">05 / ARCHIVE</span><h3>Done doesn’t<br>mean gone.</h3><p>Complete a task with an optional result, then find it again in the archive. Its record and files remain unless you explicitly delete them.</p><ul><li><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12 4 4L19 6"/></svg><span>Search titles, instructions, memos and results</span></li><li><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12 4 4L19 6"/></svg><span>Match file names, not document contents</span></li><li><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12 4 4L19 6"/></svg><span>Filter by state and month; reopen when needed</span></li></ul><a class="text-link" href="assets/images/archive.webp" data-lightbox data-title="Find completed work with its result and context attached." data-image-alt="Completed-task archive with the word summary highlighted in keyword matches and the selected task’s result and history visible.">Enlarge image<svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 3H3v5M16 3h5v5M21 16v5h-5M3 16v5h5"/></svg></a></div>
+        </section><section class="product-panel" id="view-capture" aria-labelledby="tab-capture" tabindex="0">
+          <figure class="panel-image-wrap"><a class="screen-open" href="assets/images/capture.webp" data-lightbox data-title="Start a task with the dates and context you already have." data-image-alt="Quick Capture form with a fictional task title, date range, optional folder choice and received instruction." aria-label="Enlarge image: Start a task with the dates and context you already have."><img src="assets/images/capture.webp" alt="Quick Capture form with a fictional task title, date range, optional folder choice and received instruction." width="2048" height="911" loading="lazy" decoding="async" ><span class="open-hint"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 3H3v5M16 3h5v5M21 16v5h-5M3 16v5h5"/></svg></span></a></figure>
+          <div class="panel-copy"><span class="panel-number">06 / QUICK CAPTURE</span><h3>Start with the<br>context you have.</h3><p>Enter a title and dates, then include an instruction or files before saving. Create new work or add context to an existing task.</p><ul><li><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12 4 4L19 6"/></svg><span>Task and schedule record types</span></li><li><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12 4 4L19 6"/></svg><span>Optional sender, received time and files</span></li><li><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12 4 4L19 6"/></svg><span>A folder is optional for lightweight work</span></li></ul><a class="text-link" href="assets/images/capture.webp" data-lightbox data-title="Start a task with the dates and context you already have." data-image-alt="Quick Capture form with a fictional task title, date range, optional folder choice and received instruction.">Enlarge image<svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 3H3v5M16 3h5v5M21 16v5h-5M3 16v5h5"/></svg></a></div>
+        </section>
+    <p class="preview-note"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 11v6M12 7v.1"/></svg><span>Product images: actual compiled WPF views, rendered with fictional example data. The current app uses a Korean interface; English task text is sample content.</span></p>
+    </div>
+  </section>
+  <section class="workflow" id="workflow"><div class="container">
+    <div class="section-head"><div><div class="eyebrow"><span class="line"></span>FROM REQUEST TO RECORD</div><h2>A small loop.<br>A useful work history.</h2></div><p>Built for individual, file-heavy work on Windows — reports, follow-ups, and the instructions that keep arriving.</p></div>
+    <div class="steps"><article class="step"><span class="step-index">01</span><h3>Capture the request</h3><p>Create a task, choose its dates, and add the instructions or files you already have.</p></article><article class="step"><span class="step-index">02</span><h3>Keep the context</h3><p>Add new requests, update your working memo, and gather the files as work develops.</p></article><article class="step"><span class="step-index">03</span><h3>Record the outcome</h3><p>Complete the task and optionally write what was done. Completion does not delete its record.</p></article><article class="step"><span class="step-index">04</span><h3>Find it again</h3><p>Search or browse the archive. Reopen the task when another round of work begins.</p></article></div>
+    <div class="local-panel"><div><div class="eyebrow">ON YOUR DESKTOP</div><h3>Your local folders.<br>Not another cloud workspace.</h3></div><div class="local-item"><h4>Local records, ordinary files</h4><p>The current app saves task data as local JSON and files in ordinary folders. It has no hosted application backend.</p></div><div class="local-item"><h4>Lightweight when it should be</h4><p>Create a quick, folderless task, or add a folder when the work needs files. Independent sticky notes are also available.</p></div></div>
+  </div></section>
+  <!-- BEGIN OPTIONAL FUTURE SECTION: proposal-only copy; remove this section and its navigation links if not approved. -->
+  <section class="future" id="future"><div class="container">
+    <div class="section-head"><div><div class="eyebrow"><span class="line"></span>FUTURE EXPLORATIONS</div><h2>The context is here.<br>What could come next?</h2><span class="future-disclaimer">PROPOSALS ONLY · NOT IN v0.4.8</span></div><p>The current app has no Claude integration. These are candidate experiments grounded in its task records — not features in development or a promised release schedule.</p></div>
+    <div class="future-cards"><article class="future-card"><span class="future-index">01 / CLAUDE CANDIDATE</span><h3>Suggest the next actions</h3><p>Turn user-selected instructions into reviewable action suggestions, with references to the requests that support them. Ambiguous dates stay questions, not silent schedule changes.</p><span class="input-label">Selected instructions → suggestions → user review</span></article><article class="future-card"><span class="future-index">02 / CLAUDE CANDIDATE</span><h3>Help you pick up the thread</h3><p>Create an on-demand brief of a task’s requests, notes, changes, and open questions. Keep the original instructions and memo alongside the summary.</p><span class="input-label">Selected task records → source-linked brief</span></article><article class="future-card"><span class="future-index">03 / CLAUDE CANDIDATE</span><h3>Draft the completion result</h3><p>Help write a short result using the user’s statement of what was actually finished. The draft remains editable; only the user confirms completion.</p><span class="input-label">Completion statement → editable result draft</span></article></div>
+    <div class="future-boundary"><strong>A proposed boundary: you choose the context.</strong><p>Before any future cloud API call, the product would need a way to select and inspect outgoing text. Suggestions would need review before they change a task. Local storage today does not make a future Claude feature offline.</p></div>
+    <!-- BEGIN OPTIONAL EXTRA IDEAS: one evidence-pack proposal and two new, uncommitted product ideas. -->
+    <details class="extra-ideas"><summary><span>Other directions to evaluate<span class="summary-note">Optional ideas, not a committed roadmap</span></span><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></summary><p class="ideas-intro">Beyond the first single-task AI experiments, these additions could be evaluated separately. None is implemented or scheduled.</p><div class="idea-list"><article><h4>Review selected past work</h4><p>Later Claude candidate: compare a small set of user-selected archive records, with answers linked to the supporting tasks.</p></article><article><h4>Backup and restore assistance</h4><p>New product idea: local snapshots and a preview before restoration, rather than relying only on manually copying the data folder.</p></article><article><h4>Reusable task starters</h4><p>New product idea: reuse a title, memo outline, and optional folder structure for familiar work — without implying a recurring-task engine.</p></article></div></details>
+    <!-- END OPTIONAL EXTRA IDEAS -->
+  </div></section>
+  <!-- END OPTIONAL FUTURE SECTION -->
+  <section class="about" id="about"><div class="container about-grid">
+    <div class="about-copy"><div class="eyebrow"><span class="line"></span>ABOUT THIS BUILD</div><h2>An early product.<br>A concrete workflow.</h2><p>MyTaskDock is an early Windows desktop project for personal work tracking. Version 0.4.8 brings together the calendar, task workspaces, local files, instructions, memos, completion results, and archive search.</p><div class="build-label"><span>Windows desktop</span><span>Korean UI</span><span>Source version 0.4.8</span></div><p class="about-evidence">Product snapshot: source v0.4.8, reviewed October 7, 2026. The application source is private. Product images use fictional data rather than customer records.</p></div>
+    <div class="faq"><div class="faq-title">A FEW PRACTICAL DETAILS</div><details class="faq-item"><summary>Is this a web or team workspace?<svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></summary><p>No. The current product is a single-user Windows desktop app. This website introduces it; it is not an online version. Team sharing, cloud synchronization, and web or mobile clients are not implemented.</p></details><details class="faq-item"><summary>Does it already use Claude?<svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></summary><p>No. The Claude ideas above are proposals for evaluation. Existing recognition for compatible messenger windows uses local text extraction and Windows OCR, not generative AI. Compatibility and recognition require review or manual fallback.</p></details><details class="faq-item"><summary>What can I search?<svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></summary><p>Task titles, received instruction text and sender details, working memos, completion results, and listed file names. Attached document contents and independent sticky notes are not included in task search.</p></details><details class="faq-item"><summary>Are records kept forever?<svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></summary><p>Completing a task keeps its record and files, but explicit deletion is possible. The activity history is not an immutable audit trail, a complete memo revision store, or file version history.</p></details><details class="faq-item"><summary>Can I download the app here?<svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></summary><p>This page currently presents the early product and its implemented workflow. It does not provide a public download. For questions about the project, use the contact email below.</p></details></div>
+  </div></section>
+  <section class="contact-section" id="contact"><div class="container contact-card"><div><h2>A better home for<br>the work behind the task.</h2><p>Questions, workflow ideas, or feedback on the project? Get in touch.</p></div><div class="contact-actions"><a class="btn btn-dark" href="mailto:founder@mytaskdock.xyz?subject=MyTaskDock%20%E2%80%94%20product%20inquiry">Contact MyTaskDock<svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a><div class="contact-email"><a href="mailto:founder@mytaskdock.xyz">founder@mytaskdock.xyz</a><button class="copy-button" data-copy-email="founder@mytaskdock.xyz" aria-label="Copy email address"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 8h12v13H8V8ZM16 8V3H3v13h5"/></svg></button></div></div></div></section>
+</main>
+<footer class="site-footer"><div class="container"><div class="footer-row"><a class="brand" href="index.html"><svg class="brand-icon" viewBox="0 0 36 36" aria-hidden="true"><path d="M4 9a3 3 0 0 1 3-3h7l4 4h11a3 3 0 0 1 3 3v15a3 3 0 0 1-3 3H7a3 3 0 0 1-3-3Z" fill="#efdfaf" stroke="#967331" stroke-width="1.4"/><path d="M10 17h16M10 22h11" stroke="#967331" stroke-width="1.7" stroke-linecap="round"/></svg><span>MyTaskDock</span></a><span>Personal work. Lasting context.</span><div class="footer-links"><a href="#product">Product</a><a href="#about">About</a><span>© 2026 MyTaskDock</span></div></div><p class="footer-disclosure">Screens show fictional example data. Future ideas are proposals, not current capabilities.</p></div></footer>
+<dialog class="image-dialog" aria-labelledby="dialog-title"><div class="dialog-header"><div><h2 id="dialog-title">MyTaskDock</h2><p>Actual WPF view · Example data · Select image to zoom</p></div><button class="dialog-close" aria-label="Close image"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"/></svg></button></div><div class="dialog-image-scroll"><img alt="" width="2048" height="1525"></div></dialog>
+<div class="toast" role="status" aria-live="polite" hidden></div>
 </body>
 </html>
